@@ -11,18 +11,24 @@ var router = express.Router();
 **/
 router.get('/ticker', function(req, res){
 
-    request.get(config.CoineoneUrl + '/ticker?currency=all', function(error, response, coinOne) {
+    request.get(config.CoineoneUrl, function(error, response, coinOne) {
         if(error) throw error;
 
         request.get(config.PoloniexUrl, function(error2, response2, poloniex){
             if(error2) throw error2;
-            
-            var data1 = JSON.parse(coinOne);
-            var data2 = JSON.parse(poloniex);
 
-            res.json({
-                coinOne: data1,
-                poloniex: data2
+            request.get(config.exchangeUrl, function(error3, response3, exchange){
+                if(error3) throw error3;
+
+                var data1 = JSON.parse(coinOne);
+                var data2 = JSON.parse(poloniex);
+                var data3 = JSON.parse(exchange);
+
+                res.json({
+                    coinOne: data1,
+                    poloniex: data2,
+                    exchange: data3
+                });
             });
         });
     });

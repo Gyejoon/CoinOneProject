@@ -10,9 +10,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="/public/css/style.css">
-		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-
-
 
 	</head>
 	<body>
@@ -20,38 +17,39 @@
 		<div class="container">
 
 			<h1 class="logo"><span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span>CoinOneProject</h1>
-
+			<input type="button" class="btn btn-primary btn-xs login" value="로그인">
             <div class="panel panel-info">
                 <div class="panel-heading">설정</div>
                 <div class="panel-body">
                     <span>적용코인 :
-						<input type="checkbox" class="btc"><span>BTC</span>
-						<input type="checkbox" class="eth"> <span>ETH</span>
-						<input type="checkbox" class="bch"> <span>BCH</span>
-						<input type="checkbox" class="ltc"> <span>LTC</span>
-						<input type="checkbox" class="etc"> <span>ETC</span>
-						<input type="checkbox" class="xrp"> <span>XRP</span>
-						<input type="button" class="btn btn-primary btn-xs Apply" value="적용">
+						<input type="checkbox" class="btc" checked><span>BTC</span>
+						<input type="checkbox" class="eth" checked> <span>ETH</span>
+						<input type="checkbox" class="bch" checked> <span>BCH</span>
+						<input type="checkbox" class="ltc" checked> <span>LTC</span>
+						<input type="checkbox" class="etc" checked> <span>ETC</span>
+						<input type="checkbox" class="xrp" checked> <span>XRP</span>
+						<input type="button" class="btn btn-primary btn-xs apply" value="적용">
+						<input type="button" class="btn btn-primary btn-xs reset" value="설정초기화">
                     </span> <br> <br>
                     <span>갱신시간 :
 						<select name="update" class="update">
 							<option value="5000">5초</option>
 							<option value="10000">10초</option>
-							<option value="30000">30초</option>
+							<option value="30000" selected>30초</option>
 							<option value="60000">60초</option>
 						</select>
 					</span>
 					<span>정렬
 						<select name="sort" class="sort">
-							<option value="5000">이름순</option>
-							<option value="10000">원화순</option>
-							<option value="30000">달러순</option>
-							<option value="60000">시세차익순</option>
-							<option value="60000">전일대비순</option>
-							<option value="60000">거래량순</option>
+							<option value="">선택</option>
+							<option value="name">이름순</option>
+							<option value="krw">원화순</option>
+							<option value="usd">달러순</option>
+							<option value="margin">시세차익순</option>
+							<option value="before">전일대비순</option>
+							<option value="volume">거래량순</option>
 						</select>
-					</span>
-
+					</span> <br> <br>
                 </div>
             </div>
 

@@ -45,13 +45,14 @@ body {
     width: 50%;
 }
 
-.Apply {
-    margin-left: 50%;
+.apply {
+    margin-left: 40%;
 }
 
 .logo {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
+.login {margin-bottom: 30px;}
 .red {color: red;}
 .blue {color: blue;}
