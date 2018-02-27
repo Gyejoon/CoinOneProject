@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="/public/css/style.css">
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
 
 
 	</head>
@@ -17,14 +19,39 @@
 
 		<div class="container">
 
+			<h1 class="logo"><span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span>CoinOneProject</h1>
+
             <div class="panel panel-info">
                 <div class="panel-heading">설정</div>
                 <div class="panel-body">
                     <span>적용코인 :
-						<input type="text" value="BCH, QTUM, IOTA, LTC, ETC, BTG, BTC, ETH, XRP" size="50">
+						<input type="checkbox" class="btc"><span>BTC</span>
+						<input type="checkbox" class="eth"> <span>ETH</span>
+						<input type="checkbox" class="bch"> <span>BCH</span>
+						<input type="checkbox" class="ltc"> <span>LTC</span>
+						<input type="checkbox" class="etc"> <span>ETC</span>
+						<input type="checkbox" class="xrp"> <span>XRP</span>
+						<input type="button" class="btn btn-primary btn-xs Apply" value="적용">
                     </span> <br> <br>
-                    <span>갱신시간 : <input type="text" value="5" size="1"></span> <br>
-					<input type="button" class="btn btn-primary Apply" value="적용"/>
+                    <span>갱신시간 :
+						<select name="update" class="update">
+							<option value="5000">5초</option>
+							<option value="10000">10초</option>
+							<option value="30000">30초</option>
+							<option value="60000">60초</option>
+						</select>
+					</span>
+					<span>정렬
+						<select name="sort" class="sort">
+							<option value="5000">이름순</option>
+							<option value="10000">원화순</option>
+							<option value="30000">달러순</option>
+							<option value="60000">시세차익순</option>
+							<option value="60000">전일대비순</option>
+							<option value="60000">거래량순</option>
+						</select>
+					</span>
+
                 </div>
             </div>
 
@@ -37,7 +64,7 @@
 						<th>달러(원)</th>
 						<th>시세차익</th>
 						<th>전일대비</th>
-						<th>거래량</th>
+						<th>거래량(단위: 원)</th>
                     </tr>
                 </thead>
                 <tbody class="tbody">

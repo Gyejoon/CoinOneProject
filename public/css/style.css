@@ -13,7 +13,7 @@ body {
     width:100%;
     height:100%;
     color: #000;
-    background-color: #fff;
+    background-color: #fffefc;
 }
 
 .container {
@@ -38,10 +38,20 @@ body {
 }
 
 .table {
-    width:50%;
+    width: 50%;
+}
+
+.panel {
+    width: 50%;
 }
 
 .Apply {
-    margin-top: 10px;
     margin-left: 50%;
 }
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.red {color: red;}
+.blue {color: blue;}
