@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-      
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Gyejoon/CoinOneProject.git"
@@ -19,10 +17,15 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "express-error-handler": "^1.1.0",
     "express-session": "^1.15.6",
     "moment": "^2.20.1",
     "morgan": "^1.9.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4"
   }
 }

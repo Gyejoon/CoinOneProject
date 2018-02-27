@@ -1,15 +1,17 @@
 var express = require('express')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , morgan = require('morgan');
 
 var config = require('./config/config');
+var router = require('./routes');
 
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 var expressErrorHandler = require('express-error-handler');
 
-const app = express();
+var app = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -20,7 +22,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(express.logger('dev'));
+app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(expressSession({
 	secret:'my key',
@@ -28,7 +30,7 @@ app.use(expressSession({
 	saveUninitialized:true
 }));
 
-app.use(app.router);
+app.use('/', router);
 
 var errorHandler = expressErrorHandler({
  static: {

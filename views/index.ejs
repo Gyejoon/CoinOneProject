@@ -1,21 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<title>CoinOneProject</title>
 
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/public/css/style.css">
+
 
 	</head>
 	<body>
+
 		<div class="container">
-		    <div class="jumbotron text-center">
-		        
-		    </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">설정</div>
+                <div class="panel-body">
+                    <span>적용코인 :
+						<input type="text" value="BCH, QTUM, IOTA, LTC, ETC, BTG, BTC, ETH, XRP" size="50">
+                    </span> <br> <br>
+                    <span>갱신시간 : <input type="text" value="5" size="1"></span> <br>
+					<input type="button" class="btn btn-primary Apply" value="적용"/>
+                </div>
+            </div>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>코인</th>
+                        <th>원화</th>
+						<th>달러</th>
+						<th>달러(원)</th>
+						<th>시세차익</th>
+						<th>전일대비</th>
+						<th>거래량</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                </tbody>
+            </table>
 
 		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="/public/js/index.js"></script>
+
+
 	</body>
 </html>
