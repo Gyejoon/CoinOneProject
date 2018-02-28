@@ -101,7 +101,21 @@ router.get('/getInfo', function(req, res){
         request.post(options, function(error, response, body){
             if(error) throw error;
 
-            res.send(body);
+            options.url = config.CoineoneUrl + 'v2/account/deposit_address/';
+
+            request.post(options, function(error2, response2, body2){
+                if(error2) throw error2;
+
+                var data1 = JSON.parse(body);
+                var data2 = JSON.parse(body2);
+
+                res.json({
+                    errorCode1: data1.errorCode,
+                    errorCode2: data2.errorCode,
+                    info: data1,
+                    deposit_address: data2
+                });
+            });
         });
     } else {
         res.json({message: "로그인이 필요합니다."});

@@ -156,9 +156,8 @@ var getInfo = function(){
         error: function(){
         },
         success: function(data){
-
-            if(data.errorCode == "0"){
-                var info = data.userInfo;
+            if(data.errorCode1 == "0" && data.errorCode2 == "0"){
+                var info = data.info.userInfo;
 
                 addInfo(info.securityLevel, info.bankInfo, info.emailInfo, info.mobileInfo);
             }
