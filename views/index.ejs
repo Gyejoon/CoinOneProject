@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<title>CoinOneProject</title>
 
@@ -17,7 +16,11 @@
 		<div class="container">
 
 			<h1 class="logo"><span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span>CoinOneProject</h1>
-			<input type="button" class="btn btn-primary btn-xs login" value="로그인">
+			<% if (loginInfo == null) { %>
+				<input type="button" class="btn btn-primary btn-xs login" value="API로그인">
+			<% } else { %>
+				<input type="button" class="btn btn-primary btn-xs logout" value="API로그아웃">
+			<% } %>
             <div class="panel panel-info">
                 <div class="panel-heading">설정</div>
                 <div class="panel-body">
@@ -38,20 +41,11 @@
 							<option value="30000" selected>30초</option>
 							<option value="60000">60초</option>
 						</select>
-					</span>
-					<span>정렬
-						<select name="sort" class="sort">
-							<option value="">선택</option>
-							<option value="name">이름순</option>
-							<option value="krw">원화순</option>
-							<option value="usd">달러순</option>
-							<option value="margin">시세차익순</option>
-							<option value="before">전일대비순</option>
-							<option value="volume">거래량순</option>
-						</select>
 					</span> <br> <br>
                 </div>
             </div>
+			<div id="info">
+			</div>
 
             <table class="table table-hover">
                 <thead>
@@ -68,12 +62,11 @@
                 <tbody class="tbody">
                 </tbody>
             </table>
-
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-		<script src="/public/js/index.js"></script>
+		<script src="/public/js/market.js"></script>
 
 
 	</body>

@@ -37,6 +37,10 @@ body {
     font-weight:bold;
 }
 
+#accessToken { text-align: center; }
+
+#secretKey { text-align: center;}
+
 .table {
     width: 50%;
 }
@@ -49,10 +53,10 @@ body {
     margin-left: 40%;
 }
 
-.logo {
-    margin-bottom: 30px;
-}
-
+.logo {text-align: center; margin-bottom: 30px;}
+.logo .login {color: red;}
+.submit {margin-left: 77%;}
 .login {margin-bottom: 30px;}
+.logout {margin-bottom: 30px;}
 .red {color: red;}
 .blue {color: blue;}
